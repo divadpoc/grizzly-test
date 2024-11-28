@@ -14,8 +14,11 @@ public class Main {
     public static HttpServer startServer() {
         // Create a ResourceConfig and register the Jackson JSON provider
         final ResourceConfig config = new ResourceConfig()
-                .packages("com.test.server.rest") // Package containing resource classes
-                .register(org.glassfish.jersey.jackson.JacksonFeature.class); // Enable Jackson support
+                .packages("com.test.server.rest")
+                .register(DebugFilter.class)
+                .register(GlobalExceptionMapper.class)
+                .register(org.glassfish.jersey.jackson.JacksonFeature.class);
+
 
         // Start the server with the configuration
         return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), config);
