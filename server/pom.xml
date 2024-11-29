@@ -14,11 +14,17 @@
     <name>server</name>
 
     <properties>
-        <jersey.version>3.0.11</jersey.version>
+<!--        <jersey.version>3.0.11</jersey.version>-->
 
-        <jakarta-ws-rs-api.version>3.0.0</jakarta-ws-rs-api.version> <!-- 3.1.0 -->
-        <jakarta-annotation.version>2.1.1</jakarta-annotation.version> <!-- 2.1.0 -->
-        <jakarta-activation-api.version>2.0.1</jakarta-activation-api.version> <!-- 2.1.2 -->
+<!--        <jakarta-ws-rs-api.version>3.0.0</jakarta-ws-rs-api.version>-->
+<!--        <jakarta-annotation.version>2.1.1</jakarta-annotation.version>-->
+<!--        <jakarta-activation-api.version>2.0.1</jakarta-activation-api.version>-->
+
+        <jersey.version>3.1.3</jersey.version>
+
+        <jakarta-ws-rs-api.version>3.1.0</jakarta-ws-rs-api.version>
+        <jakarta-annotation.version>2.1.1</jakarta-annotation.version>
+        <jakarta-activation-api.version>2.1.3</jakarta-activation-api.version>
 
         <!-- same as used in jersey project https://github.com/eclipse-ee4j/jersey/blob/3.0.3/pom.xml -->
         <jackson2.version>2.18</jackson2.version>
