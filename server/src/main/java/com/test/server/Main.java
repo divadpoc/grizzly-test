@@ -23,9 +23,12 @@ public class Main {
         // Start the server with the configuration
         return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), config);
     }
+
     public static void main(String[] args) {
         final HttpServer server = startServer();
         System.out.println("Server started at " + BASE_URI);
         Runtime.getRuntime().addShutdownHook(new Thread(server::shutdownNow));
+
+        UndertowTest.run();
     }
 }

@@ -16,6 +16,13 @@
         <!-- same as used in jersey project https://github.com/eclipse-ee4j/jersey/blob/3.0.3/pom.xml -->
         <jackson2.version>2.18.0</jackson2.version>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.httpcomponents.client5</groupId>
+            <artifactId>httpclient5</artifactId>
+            <version>5.4</version>
+        </dependency>
 
+    </dependencies>
 
 </project>

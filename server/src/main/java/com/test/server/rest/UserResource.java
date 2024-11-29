@@ -11,12 +11,16 @@ import jakarta.ws.rs.core.Response;
 @Path("user")
 public class UserResource {
 
+    String response = """
+            { "status": "ok" }
+            """;
+
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
     public Response test(User user) {
         System.out.println("received user:");
         System.out.println(user.toString());
-        return Response.ok().build();
+        return Response.ok().entity(response).build();
     }
 }
